@@ -1,13 +1,13 @@
 {
-  "name": "macron_scrapping2",
+  "name": "realtime-api-president-agenda",
   "version": "1.0.0",
-  "description": "",
-  "main": "scrapping.js",
+  "description": "scrapping the current french president's agenda",
+  "main": "servers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "DolMalin",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
