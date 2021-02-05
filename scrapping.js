@@ -215,7 +215,6 @@ const monthAgenda = () => {
      })
 }
 
-
 const dayAgenda = () => {
     // est-ce currentDay va se reset à chaque fois que la fonction dayAgenda sera appelée?
     let currentDay = new Intl.DateTimeFormat("fr-CA", {year: "numeric", month: "2-digit", day: "2-digit"}).format(Date.now())
@@ -265,4 +264,3 @@ const currentAgenda = () => {
  }
 
 module.exports = synchronize
-
