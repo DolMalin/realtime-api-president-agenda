@@ -234,8 +234,7 @@ const currentAgenda = () => {
     const currentTime = new Date()
     const currentMoment = `${currentDay}-${currentTime.getHours()}-${currentTime.getMinutes()}`
     const currentHour = currentTime.getHours()
-
-    console.log(currentHour)
+    
     scrape().then(res => {
         const agenda = finalAgendaFormat(timestampAgenda(organizedAgenda(res)))
         agenda.push({time:'2021-02-04-17-37', content:'SALUT JIOULES'})
