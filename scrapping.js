@@ -254,10 +254,6 @@ const currentAgenda = () => {
     })
 }
 
-/* TODO: 
-    currentEvent
-*/
-
  const synchronize = () => {
      // - Job every minute
      schedule.scheduleJob('*/1 * * * *', () => {
