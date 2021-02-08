@@ -237,17 +237,17 @@ const currentAgenda = () => {
     
     scrape().then(res => {
         const agenda = finalAgendaFormat(timestampAgenda(organizedAgenda(res)))
-        agenda.push({time:'2021-02-04-17-37', content:'SALUT JIOULES'})
         let currentAgenda = []
         for (let i = 0; i < agenda.length; i++) {
             if (agenda[i].time.includes(currentMoment)) {
                 currentAgenda.push(agenda[i])
+                fs.writeFileSync('./current_event.json', JSON.stringify(currentAgenda), 'utf-8')
             }
         }
-        if (currentHour >= 22) {
-            currentAgenda.push({event:'nothing'})
+        if (currentHour >= 16) {
+            fs.writeFileSync('./current_event.json', JSON.stringify(currentAgenda), 'utf-8')
         }
-        fs.writeFileSync('./current_event.json', JSON.stringify(currentAgenda), 'utf-8')
+
     })
 }
 
